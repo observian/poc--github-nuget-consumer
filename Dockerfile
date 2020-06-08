@@ -7,6 +7,7 @@ COPY ./NugetConsumerApi/NugetConsumerApi.csproj ./NugetConsumerApi/NugetConsumer
 COPY github-nuget-consumer.sln .
 COPY nuget.config .
 RUN sed -i "s/USERNAME/${NUGET_USERNAME}/g; s/TOKEN/${NUGET_API_KEY}/g" nuget.config
+RUN cat nuget.config
 RUN dotnet restore github-nuget-consumer.sln
 
 COPY . .

@@ -9,7 +9,7 @@ COPY nuget.config .
 RUN echo "Length of NUGET_API_KEY is ${#NUGET_API_KEY}"
 RUN sed -i "s/USERNAME/${NUGET_USERNAME}/g; s/TOKEN/${NUGET_API_KEY}/g" nuget.config
 
-RUN dotnet restore --configfile nuget.config -v diag github-nuget-consumer.sln
+RUN dotnet restore --configfile nuget.config github-nuget-consumer.sln
 
 COPY . .
 

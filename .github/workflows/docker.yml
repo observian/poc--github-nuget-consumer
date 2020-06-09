@@ -15,4 +15,4 @@ jobs:
           registry: docker.pkg.github.com
           repository: observian/poc--github-actions/nuget-consumer-blob
           tag_with_ref: true
-          build_args: NUGET_USERNAME=${{ github.actor }},NUGET_API_KEY=${{ secrets.GITHUB_TOKEN }}
+          build_args: NUGET_USERNAME=${{ github.actor }},NUGET_API_KEY=${{ secrets.PACKAGE_SERVICE_ACCOUNT_TOKEN }}

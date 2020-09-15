@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetConsumerApi", "NugetConsumerApi\NugetConsumerApi.csproj", "{D60CFEDD-86C3-47DB-82F9-A0DF19D0E701}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{3365EDE5-FBD6-462F-AEC2-A73572F00B32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{D60CFEDD-86C3-47DB-82F9-A0DF19D0E701}.Release|x64.Build.0 = Release|Any CPU
 		{D60CFEDD-86C3-47DB-82F9-A0DF19D0E701}.Release|x86.ActiveCfg = Release|Any CPU
 		{D60CFEDD-86C3-47DB-82F9-A0DF19D0E701}.Release|x86.Build.0 = Release|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Debug|x64.Build.0 = Debug|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Debug|x86.Build.0 = Debug|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Release|x64.ActiveCfg = Release|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Release|x64.Build.0 = Release|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Release|x86.ActiveCfg = Release|Any CPU
+		{3365EDE5-FBD6-462F-AEC2-A73572F00B32}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

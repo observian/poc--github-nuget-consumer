@@ -1,0 +1,22 @@
+name: Publish Nuget package
+on: [push]
+
+jobs:
+  build:
+    name:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+
+      - name: publish nuget
+        run: |
+          version=`date +"%Y.%m%d.%H%M"`
+          sed -i "s/1.0.0/${version}/g" ./Models/Models.csproj
+          dotnet pack -c Release -o . ./Models/Models.csproj
+
+          sed -i 's/USERNAME/${{ github.actor }}/g; s/APIKEY/${{ secrets.GITHUB_TOKEN }}/g' nuget.config
+          dotnet nuget push *.nupkg -s "github"
+          

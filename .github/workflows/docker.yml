@@ -13,7 +13,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: observian/poc--github-nuget-consumer/nuget-consumer-blob
+          repository: observian/poc--github-nuget-consumer/models
           tag_with_ref: true
           tag_with_sha: true
           build_args: NUGET_USERNAME=${{ github.actor }},NUGET_API_KEY=${{ secrets.PACKAGE_SERVICE_ACCOUNT_TOKEN }}

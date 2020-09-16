@@ -16,8 +16,6 @@ jobs:
           version=`date +"%Y.%m%d.%H%M"`
           sed -i "s/1.0.0/${version}/g" ./Models/Models.csproj
           dotnet pack -c Release -o . ./Models/Models.csproj
-
-          sed -i 's/USERNAME/${{ github.actor }}/g; s/TOKEN/${{ secrets.PACKAGE_SERVICE_ACCOUNT_TOKEN }}/g' nuget.config
-          cat nuget.config
-          dotnet nuget push *.nupkg -s "github"
+          
+          dotnet nuget push *.nupkg -s "github" -k ${{ secrets.PACKAGE_SERVICE_ACCOUNT_TOKEN }}
           

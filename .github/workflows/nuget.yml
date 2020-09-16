@@ -18,5 +18,6 @@ jobs:
           dotnet pack -c Release -o . ./Models/Models.csproj
 
           sed -i 's/USERNAME/${{ github.actor }}/g; s/APIKEY/${{ secrets.PACKAGE_SERVICE_ACCOUNT_TOKEN }}/g' nuget.config
+          cat nuget.config
           dotnet nuget push *.nupkg -s "github"
           

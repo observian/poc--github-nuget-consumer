@@ -1,12 +1,14 @@
-name: Publish Docker image
+name: Build and Deploy to Docker Image
 on: push
 jobs:
-  push_to_registry:
-    name: Push Docker image to GitHub Packages
+  setup-build-publish-deploy:
+    name: Build - Tag - Deploy
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out the repo
+      - name: Checkout
         uses: actions/checkout@v2
+
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
@@ -16,4 +18,9 @@ jobs:
           repository: observian/poc--github-nuget-consumer/nuget-consumer-blob
           tag_with_ref: true
           tag_with_sha: true
-          build_args: NUGET_USERNAME=${{ github.actor }},NUGET_API_KEY=${{ secrets.PACKAGE_SERVICE_ACCOUNT_TOKEN }}
+          build_args: NUGET_USERNAME=${{ github.actor }},NUGET_API_KEY=${{ secrets.GITHUB_TOKEN }}
+
+
+
+
+         

@@ -5,6 +5,17 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NugetConsumerApi", "NugetConsumerApi\NugetConsumerApi.csproj", "{D60CFEDD-86C3-47DB-82F9-A0DF19D0E701}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Actions", "Actions", "{D113A870-F1D9-4A57-AA1D-89752638F9DB}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\docker.yml = .github\workflows\docker.yml
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Container", "Container", "{9F105CB5-AE3F-4F84-A178-A7F10C2591D7}"
+ProjectSection(SolutionItems) = preProject
+	Dockerfile = Dockerfile
+	nuget.config = nuget.config
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApiModels;
@@ -33,6 +32,7 @@ namespace NugetConsumerApi.Controllers
                 Property2 = "stuff",
                 Property3 = "stuff"
             };
+            
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
